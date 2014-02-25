@@ -19,20 +19,13 @@ namespace AdvShutdownClient
         static private bool boolContinue;
         static private StreamReader streamInput;
         static private StreamWriter streamOutput;
-        private NamedPipeServerStream streamServer;
+        static private NamedPipeServerStream streamServer;
         static private Form formWindow;
-
-        public ADVShutdown()
-        {
-            InitializeComponent();
-            strActivate = Hardware.HardwareID();
-            strActivate += DateTime.Today.ToLocalTime().ToBinary().ToString();
-            this.MoveWindow();
-            this.StartServer();
-        }
 
         static void Main(string[] args)
         {
+            strActivate = Hardware.HardwareID();
+            strActivate += DateTime.Today.ToLocalTime().ToBinary().ToString();
             formWindow = new ADVShutdown();
             //formWindow.Visible = false;
             Application.EnableVisualStyles();
@@ -52,8 +45,7 @@ namespace AdvShutdownClient
 
         private void RestartServer()
         {
-            streamServer.Close();
-            streamServer = null;
+            streamServer.Dispose();
             this.StartServer();
         }
 
@@ -86,6 +78,14 @@ namespace AdvShutdownClient
                         boolContinue = false;
                     }
 
+
+                    if (!String.Equals(arrCommands[3], ""))
+                    {
+                        strReason = arrCommands[3];
+                        strResult += "Reason set¬";
+                    }
+                    else strResult += "Using default reason text¬";
+
                     if (!String.Equals(arrCommands[2], ""))
                     {
                         try
@@ -102,14 +102,6 @@ namespace AdvShutdownClient
                             strResult += "'{0}' is outside the range of a Double. Using the default 5 minute timer¬";
                         }
                     }
-                    else strResult += "Using default 5 minute timer¬";
-
-                    if (!String.Equals(arrCommands[3], ""))
-                    {
-                        strReason = arrCommands[3];
-                        strResult += "Reason set¬";
-                    }
-                    else strResult += "Using default reason text¬";
                 }
 
                 if (boolContinue)
@@ -135,14 +127,19 @@ namespace AdvShutdownClient
                 {
                     strResult += "Command " + strCommandReceived + "Not Accepted¬";
                     strResult += "Incorrect parameters - " + strAction + " cancelled";
-                    streamOutput.WriteLine(strResult); 
+                    streamOutput.WriteLine(strResult);
                 }
             }
 
-            RestartServer();
+            //RestartServer();
         }
 
-       
+        private ADVShutdown()
+        {
+            InitializeComponent();
+            this.MoveWindow();
+            this.StartServer();
+        }
 
         /// <summary>
         /// Load the options into the window
@@ -153,7 +150,7 @@ namespace AdvShutdownClient
             strReason = strReason.Replace("&&&", "\r\n");
             this.textBoxReason.Text = strReason;
             labelTime.Text = DateTime.Now.AddSeconds(dblDelay).ToShortTimeString();
-          }
+        }
 
         /// <summary>
         /// Move the window to the bottom right of the screen and make topmost

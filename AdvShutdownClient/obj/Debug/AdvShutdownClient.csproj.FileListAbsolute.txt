@@ -6,5 +6,10 @@ D:\c#\Projects\AdvShutdownClient\AdvShutdownClient\obj\Debug\AdvShutdownClient.c
 D:\c#\Projects\AdvShutdownClient\AdvShutdownClient\obj\Debug\AdvShutdownClient.exe
 D:\c#\Projects\AdvShutdownClient\AdvShutdownClient\obj\Debug\AdvShutdownClient.pdb
 D:\c#\Projects\ADVShutdown\AdvShutdownClient\bin\Debug\AdvShutdownClient.exe.config
+D:\c#\Projects\ADVShutdown\AdvShutdownClient\bin\Debug\AdvShutdownClient.exe
+D:\c#\Projects\ADVShutdown\AdvShutdownClient\bin\Debug\AdvShutdownClient.pdb
+D:\c#\Projects\ADVShutdown\AdvShutdownClient\obj\Debug\AdvShutdownClient.ADVShutdown.resources
+D:\c#\Projects\ADVShutdown\AdvShutdownClient\obj\Debug\AdvShutdownClient.csproj.GenerateResource.Cache
 D:\c#\Projects\ADVShutdown\AdvShutdownClient\obj\Debug\AdvShutdownClient.exe
 D:\c#\Projects\ADVShutdown\AdvShutdownClient\obj\Debug\AdvShutdownClient.pdb
+D:\c#\Projects\ADVShutdown\AdvShutdownClient\obj\Debug\AdvShutdownClient.csprojResolveAssemblyReference.cache
