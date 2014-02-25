@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>AdvShutdownClient.ADVShutdown</StartupObject>
+    <StartupObject>AdvShutdownClient.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -68,6 +68,7 @@
     <Compile Include="ADVShutdown.Designer.cs">
       <DependentUpon>ADVShutdown.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Hardware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
