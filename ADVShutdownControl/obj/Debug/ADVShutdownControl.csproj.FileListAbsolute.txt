@@ -1,0 +1,6 @@
+D:\c#\Projects\ADVShutdownControl\ADVShutdownControl\bin\Debug\ADVShutdownControl.exe.config
+D:\c#\Projects\ADVShutdownControl\ADVShutdownControl\bin\Debug\ADVShutdownControl.exe
+D:\c#\Projects\ADVShutdownControl\ADVShutdownControl\bin\Debug\ADVShutdownControl.pdb
+D:\c#\Projects\ADVShutdownControl\ADVShutdownControl\obj\Debug\ADVShutdownControl.csprojResolveAssemblyReference.cache
+D:\c#\Projects\ADVShutdownControl\ADVShutdownControl\obj\Debug\ADVShutdownControl.exe
+D:\c#\Projects\ADVShutdownControl\ADVShutdownControl\obj\Debug\ADVShutdownControl.pdb
