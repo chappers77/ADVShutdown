@@ -29,7 +29,6 @@ namespace AdvShutdownClient
             strActivate += DateTime.Today.ToLocalTime().ToBinary().ToString();
             this.MoveWindow();
             this.StartServer();
-
         }
 
         static void Main(string[] args)
